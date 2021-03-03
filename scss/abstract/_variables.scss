@@ -1,0 +1,49 @@
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// COLORS
+$color-increased: hsl(163, 72%, 41%);
+$color-decreased: hsl(356, 69%, 56%);
+
+$color-facebook: hsl(208, 92%, 53%);
+$color-twitter: hsl(203, 89%, 53%);
+$color-instagram: linear-gradient(
+  to right,
+  hsl(37, 97%, 70%),
+  hsl(329, 70%, 58%)
+);
+$color-youtube: hsl(348, 97%, 39%);
+
+:root {
+  // #### Light Theme
+  --color-toggle-bg: hsl(230, 22%, 74%);
+  --color-bg-primary: hsl(0, 0%, 100%);
+  --color-bg-secondary: hsl(225, 100%, 98%);
+  --color-card-bg: hsl(227, 47%, 96%);
+  --color-text-primary: hsl(230, 17%, 14%);
+  --color-text-secondary: hsl(228, 12%, 44%);
+}
+
+[data-theme="dark"] {
+  // #### Dark Theme
+  --color-toggle-bg: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  --color-bg-primary: hsl(230, 17%, 14%);
+  --color-bg-secondary: hsl(232, 19%, 15%);
+  --color-card-bg: hsl(228, 28%, 20%);
+  --color-text-primary: hsl(0, 0%, 100%);
+  --color-text-secondary: hsl(228, 34%, 66%);
+}
+// TYPOGRAPHY
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// CARDS
+
+$card-width-big: 22%;

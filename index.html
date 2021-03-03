@@ -1,87 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | Social Media Dashboard</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading-primary">
+        <span class="heading-primary--main">Social Media Dashboard</span>
+        <span class="heading-primary--sub">Total Followers: 23,004</span>
+      </h1>
+      <div class="toggle">
+        <label class="toggle__label" for="toggle__input">Dark Mode</label>
+        <input type="checkbox" id="toggle__input" class="toggle__input" />
+      </div>
+    </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <main>
+      <section class="section-totals">
+        <div class="card-container-totals">
+          <div class="card-total">
+            <div class="card-total__network">
+              <img
+                src="images/icon-facebook.svg"
+                alt="Facebook Icon"
+                class="card-total__icon"
+              />
+              <div class="card-total__handle">@nathanf</div>
+            </div>
+            <div class="card-total__total-followers">
+              <span class="card-total__number">1987</span>
+              <span class="card-total__text">Followers</span>
+            </div>
+            <div class="card-total__daily increased">12 today</div>
+          </div>
+          <div class="card-total">
+            <div class="card-total__network">
+              <img
+                src="images/icon-twitter.svg"
+                alt="Twitter Icon"
+                class="card-total__icon"
+              />
+              <div class="card-total__handle">@nathanf</div>
+            </div>
+            <div class="card-total__total-followers">
+              <span class="card-total__number">1044</span>
+              <span class="card-total__text">Followers</span>
+            </div>
+            <div class="card-total__daily increased">90 today</div>
+          </div>
+          <div class="card-total">
+            <div class="card-total__network">
+              <img
+                src="images/icon-instagram.svg"
+                alt="Instagram Icon"
+                class="card-total__icon"
+              />
+              <div class="card-total__handle">@realnathanf</div>
+            </div>
+            <div class="card-total__total-followers">
+              <span class="card-total__number">11k</span>
+              <span class="card-total__text">Followers</span>
+            </div>
+            <div class="card-total__daily increased">1099 today</div>
+          </div>
+          <div class="card-total">
+            <div class="card-total__network">
+              <img
+                src="images/icon-youtube.svg"
+                alt="YouTube Icon"
+                class="card-total__icon"
+              />
+              <div class="card-total__handle">Nathan F.</div>
+            </div>
+            <div class="card-total__total-followers">
+              <span class="card-total__number">8239</span>
+              <span class="card-total__text">Subscribers</span>
+            </div>
+            <div class="card-total__daily decreased">144 today</div>
+          </div>
+        </div>
+      </section>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+      <section class="section-overview-today">
+        <h2 class="heading-secondary">Overview - Today</h2>
+        <div class="card-container-dailies">
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Page Views</div>
+              <img
+                src="images/icon-facebook.svg"
+                alt="Facebook Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">87</div>
+              <div class="card-daily__percentage increased">3%</div>
+            </div>
+          </div>
 
-  Dark Mode
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Likes</div>
+              <img
+                src="images/icon-facebook.svg"
+                alt="Facebook Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">52</div>
+              <div class="card-daily__percentage decreased">2%</div>
+            </div>
+          </div>
 
-  
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Likes</div>
+              <img
+                src="images/icon-instagram.svg"
+                alt="Instagram Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">5462</div>
+              <div class="card-daily__percentage increased">2257%</div>
+            </div>
+          </div>
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Profile Views</div>
+              <img
+                src="images/icon-instagram.svg"
+                alt="Instagram Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">52k</div>
+              <div class="card-daily__percentage increased">1375%</div>
+            </div>
+          </div>
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Retweets</div>
+              <img
+                src="images/icon-twitter.svg"
+                alt="Twitter Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">117</div>
+              <div class="card-daily__percentage increased">303%</div>
+            </div>
+          </div>
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Likes</div>
+              <img
+                src="images/icon-twitter.svg"
+                alt="Twitter Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">507</div>
+              <div class="card-daily__percentage increased">553%</div>
+            </div>
+          </div>
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Likes</div>
+              <img
+                src="images/icon-youtube.svg"
+                alt="YouTube Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">107</div>
+              <div class="card-daily__percentage decreased">19%</div>
+            </div>
+          </div>
+          <div class="card-daily">
+            <div class="card-daily__row">
+              <div class="card-daily__text">Total views</div>
+              <img
+                src="images/icon-youtube.svg"
+                alt="YouTube Icon"
+                class="card-daily__icon"
+              />
+            </div>
+            <div class="card-daily__row">
+              <div class="card-daily__number">1407</div>
+              <div class="card-daily__percentage decreased">12%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+  <script src="js/script.js"></script>
 </html>

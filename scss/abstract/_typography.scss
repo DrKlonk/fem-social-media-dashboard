@@ -1,0 +1,31 @@
+body {
+  font-family: "Inter", "sans-serif";
+  font-size: 0.875rem;
+}
+
+.heading-primary {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &--main {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+  }
+  &--sub {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+  }
+}
+
+.heading-secondary {
+  color: var(--color-text-secondary);
+}
+
+.increased {
+  color: $color-increased;
+}
+
+.decreased {
+  color: $color-decreased;
+}

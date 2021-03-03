@@ -1,0 +1,14 @@
+.toggle {
+  color: var(--color-text-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__label {
+    font-weight: $font-weight-bold;
+    margin-right: 1rem;
+  }
+
+  &__input {
+  }
+}
