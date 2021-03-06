@@ -19,21 +19,22 @@
     <title>Frontend Mentor | Social Media Dashboard</title>
   </head>
   <body>
-    <header class="header">
-      <h1 class="heading-primary">
-        <span class="heading-primary--main">Social Media Dashboard</span>
-        <span class="heading-primary--sub">Total Followers: 23,004</span>
-      </h1>
-      <div class="toggle">
-        <label class="toggle__label" for="toggle__input">Dark Mode</label>
-        <input type="checkbox" id="toggle__input" class="toggle__input" />
-      </div>
-    </header>
-
     <main>
       <section class="section-totals">
+        <header class="header">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">Social Media Dashboard</span>
+            <span class="heading-primary--sub">Total Followers: 23,004</span>
+          </h1>
+          <div class="toggle">
+            <span class="toggle__label">Dark Mode</span>
+            <input type="checkbox" id="toggle__input" class="toggle__input" />
+            <label class="toggle__switch" for="toggle__input"></label>
+          </div>
+        </header>
+
         <div class="card-container-totals">
-          <div class="card-total">
+          <div class="card-total card-total--facebook">
             <div class="card-total__network">
               <img
                 src="images/icon-facebook.svg"
@@ -48,7 +49,8 @@
             </div>
             <div class="card-total__daily increased">12 today</div>
           </div>
-          <div class="card-total">
+
+          <div class="card-total card-total--twitter">
             <div class="card-total__network">
               <img
                 src="images/icon-twitter.svg"
@@ -63,7 +65,8 @@
             </div>
             <div class="card-total__daily increased">90 today</div>
           </div>
-          <div class="card-total">
+
+          <div class="card-total card-total--instagram">
             <div class="card-total__network">
               <img
                 src="images/icon-instagram.svg"
@@ -78,7 +81,8 @@
             </div>
             <div class="card-total__daily increased">1099 today</div>
           </div>
-          <div class="card-total">
+
+          <div class="card-total card-total--youtube">
             <div class="card-total__network">
               <img
                 src="images/icon-youtube.svg"
@@ -223,6 +227,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="js/script.js"></script>
   </body>
-  <script src="js/script.js"></script>
 </html>

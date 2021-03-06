@@ -4,7 +4,7 @@ body {
 }
 
 .heading-primary {
-  padding-top: 2rem;
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
 
@@ -23,9 +23,37 @@ body {
 }
 
 .increased {
+  position: relative;
   color: $color-increased;
+  font-weight: $font-weight-bold;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-image: url(../images/icon-up.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0.4rem;
+    left: -0.6rem;
+  }
 }
 
 .decreased {
+  position: relative;
   color: $color-decreased;
+  font-weight: $font-weight-bold;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-image: url(../images/icon-down.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0.4rem;
+    left: -0.6rem;
+  }
 }

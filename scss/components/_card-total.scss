@@ -7,11 +7,22 @@
   align-items: center;
   height: 12rem;
   border-radius: 0.25rem;
-  border-top: 0.25rem solid deeppink;
-  width: $card-width-big;
 
-  @media (max-width: 20em) {
-    width: 40%;
+  &--facebook {
+    border-top: 0.25rem solid $color-facebook;
+  }
+  &--twitter {
+    border-top: 0.25rem solid $color-twitter;
+  }
+  &--instagram {
+    background: linear-gradient(var(--color-card-bg), var(--color-card-bg)),
+      $color-instagram;
+    border-top: 0.25rem solid transparent;
+    background-repeat: no-repeat;
+    background-origin: padding-box, border-box;
+  }
+  &--youtube {
+    border-top: 0.25rem solid $color-youtube;
   }
 
   &__network {
@@ -26,6 +37,7 @@
   &__handle {
     color: var(--color-text-secondary);
     font-weight: $font-weight-bold;
+    font-size: 0.9rem;
   }
 
   &__total-followers {

@@ -1,5 +1,5 @@
 :root {
-  --color-toggle-bg: hsl(230, 22%, 74%);
+  --color-toggle-bg: linear-gradient(hsl(230, 22%, 74%), hsl(230, 22%, 74%));
   --color-bg-primary: hsl(0, 0%, 100%);
   --color-bg-secondary: hsl(225, 100%, 98%);
   --color-card-bg: hsl(227, 47%, 96%);
@@ -23,7 +23,7 @@ body {
   font-size: 0.875rem; }
 
 .heading-primary {
-  padding-top: 2rem;
+  margin: 2rem 0;
   display: flex;
   flex-direction: column; }
   .heading-primary--main {
@@ -37,10 +37,34 @@ body {
   color: var(--color-text-secondary); }
 
 .increased {
-  color: #1db489; }
+  position: relative;
+  color: #1db489;
+  font-weight: 700; }
+  .increased::before {
+    display: block;
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-image: url(../images/icon-up.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0.4rem;
+    left: -0.6rem; }
 
 .decreased {
-  color: #dc414c; }
+  position: relative;
+  color: #dc414c;
+  font-weight: 700; }
+  .decreased::before {
+    display: block;
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-image: url(../images/icon-down.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0.4rem;
+    left: -0.6rem; }
 
 *,
 *::before,
@@ -50,20 +74,27 @@ body {
   box-sizing: border-box; }
 
 body {
-  background-image: linear-gradient(to bottom, var(--color-bg-secondary) 30%, var(--color-bg-primary) 30%); }
+  background-image: linear-gradient(to bottom, var(--color-bg-secondary) 30vh, var(--color-bg-primary) 30vh); }
+  @media only screen and (max-width: 43.75em) {
+    body {
+      background-image: linear-gradient(to bottom, var(--color-bg-secondary) 40vh, var(--color-bg-primary) 40vh); } }
+  @media only screen and (max-width: 30em) {
+    body {
+      background-image: linear-gradient(to bottom, var(--color-bg-secondary) 50vh, var(--color-bg-primary) 50vh); } }
 
 .card-daily {
   background-color: var(--color-card-bg);
-  padding: 1.5rem;
+  padding: 1rem;
   height: 8rem;
-  width: 22%;
-  margin-top: 2rem;
+  border-radius: 0.25rem;
+  transition: transform 0.4s;
+  transform: scale(1);
   display: flex;
-  justify-content: space-between;
-  flex-direction: column; }
-  @media only screen and (max-width: 1000px) {
-    .card-daily {
-      width: 33%; } }
+  flex-direction: column;
+  justify-content: space-between; }
+  .card-daily:hover {
+    cursor: pointer;
+    transform: scale(1.1); }
   .card-daily__row {
     display: flex;
     justify-content: space-between; }
@@ -73,7 +104,7 @@ body {
     color: var(--color-text-secondary);
     font-weight: 700; }
   .card-daily__number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--color-text-primary); }
 
@@ -85,12 +116,18 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 12rem;
-  border-radius: 0.25rem;
-  border-top: 0.25rem solid deeppink;
-  width: 22%; }
-  @media (max-width: 20em) {
-    .card-total {
-      width: 40%; } }
+  border-radius: 0.25rem; }
+  .card-total--facebook {
+    border-top: 0.25rem solid #198ff5; }
+  .card-total--twitter {
+    border-top: 0.25rem solid #1ca0f2; }
+  .card-total--instagram {
+    background: linear-gradient(var(--color-card-bg), var(--color-card-bg)), linear-gradient(to right, #fdc468, #df4996);
+    border-top: 0.25rem solid transparent;
+    background-repeat: no-repeat;
+    background-origin: padding-box, border-box; }
+  .card-total--youtube {
+    border-top: 0.25rem solid #c4032a; }
   .card-total__network {
     display: flex;
     justify-content: space-between; }
@@ -98,7 +135,8 @@ body {
     margin-right: 1rem; }
   .card-total__handle {
     color: var(--color-text-secondary);
-    font-weight: 700; }
+    font-weight: 700;
+    font-size: 0.9rem; }
   .card-total__total-followers {
     display: flex;
     flex-direction: column;
@@ -121,34 +159,85 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 43.75em) {
+    .toggle {
+      padding: 2rem 0;
+      border-top: 1px solid var(--color-text-secondary); } }
   .toggle__label {
     font-weight: 700;
     margin-right: 1rem; }
+  .toggle__switch {
+    width: 3.5rem;
+    height: 2rem;
+    border-radius: 100px;
+    background-image: var(--color-toggle-bg);
+    position: relative; }
+    .toggle__switch::before {
+      transition: all 0.8s ease;
+      position: absolute;
+      left: 0.25rem;
+      top: 50%;
+      transform: translate(0, -50%);
+      content: "";
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: var(--color-bg-secondary); }
+  .toggle__input {
+    opacity: 0;
+    position: absolute; }
+  .toggle__input:checked + .toggle__switch::before {
+    transform: translate(1.525rem, -50%); }
 
 body {
   width: 80vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 2rem; }
+  @media only screen and (max-width: 43.75em) {
+    body {
+      width: 90vw; } }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-
-.section-totals {
-  margin-top: 2rem; }
+  @media only screen and (max-width: 43.75em) {
+    .header {
+      flex-direction: column;
+      align-items: stretch; } }
 
 .section-overview-today {
   margin-top: 2rem; }
 
 .card-container-totals {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 2rem; }
+  @media only screen and (max-width: 66.25em) {
+    .card-container-totals {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 43.75em) {
+    .card-container-totals {
+      gap: 1rem 1rem; } }
+  @media only screen and (max-width: 30em) {
+    .card-container-totals {
+      grid-template-columns: 1fr; } }
 
 .card-container-dailies {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; }
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 2rem; }
+  @media only screen and (max-width: 66.25em) {
+    .card-container-dailies {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 43.75em) {
+    .card-container-dailies {
+      gap: 1rem 1rem; } }
+  @media only screen and (max-width: 30em) {
+    .card-container-dailies {
+      grid-template-columns: 1fr; } }

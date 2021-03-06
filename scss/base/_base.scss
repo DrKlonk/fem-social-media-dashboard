@@ -9,7 +9,23 @@
 body {
   background-image: linear-gradient(
     to bottom,
-    var(--color-bg-secondary) 30%,
-    var(--color-bg-primary) 30%
+    var(--color-bg-secondary) 30vh,
+    var(--color-bg-primary) 30vh
   );
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-bg-secondary) 40vh,
+      var(--color-bg-primary) 40vh
+    );
+  }
+
+  @include respond(phone) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-bg-secondary) 50vh,
+      var(--color-bg-primary) 50vh
+    );
+  }
 }
