@@ -1,14 +1,17 @@
 body {
-  width: 80vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding-bottom: 2rem;
+  align-items: center;
 
   @include respond(tab-port) {
     width: 90vw;
   }
+}
+
+.main {
+  width: 80vw;
+  flex-grow: 1;
 }
 
 .header {
@@ -65,5 +68,26 @@ body {
   }
   @include respond(phone) {
     grid-template-columns: 1fr;
+  }
+}
+
+.attribution {
+  padding: 1rem;
+  margin-top: 4rem;
+  font-size: 0.875rem;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--color-card-bg);
+  color: var(--color-text-secondary);
+
+  & a {
+    &:link,
+    &:visited {
+      color: var(--color-text-secondary);
+    }
+
+    &:hover {
+      color: orangered;
+    }
   }
 }
