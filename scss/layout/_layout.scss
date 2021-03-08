@@ -3,10 +3,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include respond(tab-port) {
-    width: 90vw;
-  }
 }
 
 .main {
