@@ -3,6 +3,7 @@
   --color-bg-primary: hsl(0, 0%, 100%);
   --color-bg-secondary: hsl(225, 100%, 98%);
   --color-card-bg: hsl(227, 47%, 96%);
+  --color-card-bg-hover: hsl(240, 5%, 93%);
   --color-text-primary: hsl(230, 17%, 14%);
   --color-text-secondary: hsl(228, 12%, 44%); }
 
@@ -15,6 +16,7 @@
   --color-bg-primary: hsl(230, 17%, 14%);
   --color-bg-secondary: hsl(232, 19%, 15%);
   --color-card-bg: hsl(228, 28%, 20%);
+  --color-card-bg-hover: hsl(231, 34%, 32%);
   --color-text-primary: hsl(0, 0%, 100%);
   --color-text-secondary: hsl(228, 34%, 66%); }
 
@@ -87,7 +89,7 @@ body {
   justify-content: space-between; }
   .card-daily:hover {
     cursor: pointer;
-    transform: scale(1.1); }
+    background-color: var(--color-card-bg-hover); }
   .card-daily__row {
     display: flex;
     justify-content: space-between; }
@@ -110,6 +112,9 @@ body {
   align-items: center;
   height: 12rem;
   border-radius: 0.25rem; }
+  .card-total:hover {
+    cursor: pointer;
+    background-color: var(--color-card-bg-hover); }
   .card-total--facebook {
     border-top: 0.25rem solid #198ff5; }
   .card-total--twitter {
@@ -119,6 +124,11 @@ body {
     border-top: 0.25rem solid transparent;
     background-repeat: no-repeat;
     background-origin: padding-box, border-box; }
+    .card-total--instagram:hover {
+      background: linear-gradient(var(--color-card-bg-hover), var(--color-card-bg-hover)), linear-gradient(to right, #fdc468, #df4996);
+      border-top: 0.25rem solid transparent;
+      background-repeat: no-repeat;
+      background-origin: padding-box, border-box; }
   .card-total--youtube {
     border-top: 0.25rem solid #c4032a; }
   .card-total__network {

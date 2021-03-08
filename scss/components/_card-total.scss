@@ -8,6 +8,11 @@
   height: 12rem;
   border-radius: 0.25rem;
 
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-card-bg-hover);
+  }
+
   &--facebook {
     border-top: 0.25rem solid $color-facebook;
   }
@@ -20,6 +25,17 @@
     border-top: 0.25rem solid transparent;
     background-repeat: no-repeat;
     background-origin: padding-box, border-box;
+
+    &:hover {
+      background: linear-gradient(
+          var(--color-card-bg-hover),
+          var(--color-card-bg-hover)
+        ),
+        $color-instagram;
+      border-top: 0.25rem solid transparent;
+      background-repeat: no-repeat;
+      background-origin: padding-box, border-box;
+    }
   }
   &--youtube {
     border-top: 0.25rem solid $color-youtube;
