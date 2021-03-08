@@ -9,6 +9,12 @@ body {
 }
 
 .heading-secondary {
+  margin: 2rem 0;
+  color: var(--color-text-primary);
+}
+
+.heading-sub-text {
+  font-weight: $font-weight-bold;
   color: var(--color-text-secondary);
 }
 
