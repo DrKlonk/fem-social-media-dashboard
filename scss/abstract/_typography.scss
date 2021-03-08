@@ -4,18 +4,8 @@ body {
 }
 
 .heading-primary {
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-
-  &--main {
-    font-size: 2rem;
-    color: var(--color-text-primary);
-  }
-  &--sub {
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-  }
+  font-size: 2rem;
+  color: var(--color-text-primary);
 }
 
 .heading-secondary {

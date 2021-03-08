@@ -22,14 +22,19 @@
     <main>
       <section class="section-totals">
         <header class="header">
-          <h1 class="heading-primary">
-            <span class="heading-primary--main">Social Media Dashboard</span>
-            <span class="heading-primary--sub">Total Followers: 23,004</span>
-          </h1>
+          <div class="flex-container-headings">
+            <h1 class="heading-primary">Social Media Dashboard</h1>
+            <h3 class="heading-secondary">Total Followers: 23,004</h3>
+          </div>
           <div class="toggle">
-            <span class="toggle__label">Dark Mode</span>
-            <input type="checkbox" id="toggle__input" class="toggle__input" />
-            <label class="toggle__switch" for="toggle__input"></label>
+            <input
+              type="checkbox"
+              id="toggle__input"
+              class="toggle__input"
+              checked="true"
+            />
+            <label class="toggle__label" for="toggle__input">Dark Mode</label>
+            <div class="toggle__switch"></div>
           </div>
         </header>
 
@@ -43,10 +48,10 @@
               />
               <div class="card-total__handle">@nathanf</div>
             </div>
-            <div class="card-total__total-followers">
+            <p class="card-total__total-followers">
               <span class="card-total__number">1987</span>
               <span class="card-total__text">Followers</span>
-            </div>
+            </p>
             <div class="card-total__daily increased">12 today</div>
           </div>
 
@@ -75,10 +80,10 @@
               />
               <div class="card-total__handle">@realnathanf</div>
             </div>
-            <div class="card-total__total-followers">
+            <p class="card-total__total-followers">
               <span class="card-total__number">11k</span>
               <span class="card-total__text">Followers</span>
-            </div>
+            </p>
             <div class="card-total__daily increased">1099 today</div>
           </div>
 
@@ -91,10 +96,10 @@
               />
               <div class="card-total__handle">Nathan F.</div>
             </div>
-            <div class="card-total__total-followers">
+            <p class="card-total__total-followers">
               <span class="card-total__number">8239</span>
               <span class="card-total__text">Subscribers</span>
-            </div>
+            </p>
             <div class="card-total__daily decreased">144 today</div>
           </div>
         </div>

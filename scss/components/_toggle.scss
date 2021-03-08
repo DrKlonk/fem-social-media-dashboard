@@ -1,17 +1,22 @@
 .toggle {
   color: var(--color-text-secondary);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  position: relative;
 
   @include respond(tab-port) {
     padding: 2rem 0;
     border-top: 1px solid var(--color-text-secondary);
+    justify-content: flex-start;
   }
 
   &__label {
     font-weight: $font-weight-bold;
-    margin-right: 1rem;
+    padding: 1rem 4.5rem 1rem 0rem;
+    margin-right: -3.5rem;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
   }
 
   &__switch {
@@ -39,9 +44,10 @@
   &__input {
     opacity: 0;
     position: absolute;
+    left: 1rem;
   }
 
-  &__input:checked + .toggle__switch::before {
+  &__input:checked ~ .toggle__switch::before {
     transform: translate(1.525rem, -50%);
   }
 }
